@@ -1,21 +1,7 @@
 @import '../node_modules/modern-normalize/modern-normalize.css';
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 :root {
-  /* --sky-blue-color: #3470ff;
+  --sky-blue-color: #3470ff;
   --blue-color: #0b44cd;
   --active-color: orange;
   --white-color: #fff;
@@ -26,7 +12,7 @@ code {
   --light-black-color: #363535;
   --black-opacity-50-color: rgba(18, 20, 23, 0.5);
   --black-opacity-20-color: rgba(18, 20, 23, 0.2);
-  --black-opacity-5-color: rgba(18, 20, 23, 0.05); */
+  --black-opacity-5-color: rgba(18, 20, 23, 0.05);
 
 #root {
   height: 100vh; 
