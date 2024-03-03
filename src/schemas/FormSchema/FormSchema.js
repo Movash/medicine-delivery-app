@@ -9,10 +9,6 @@ export const formSchema = yup.object().shape({
     .string()
     .matches(emailPattern, 'Error email. Example: test@gmail.com')
     .required('Required'),
-  // password: yup
-  //   .string()
-  //   .min(6, 'Must be 6 or more characters')
-  //   .required('Required'),
   phone: yup
     .string()
     .matches(phonePattern, 'Error phone. Example: 0971234567')
