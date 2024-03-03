@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/medicine-delivery-app/static/css/main.225435f0.css",
-    "main.js": "/medicine-delivery-app/static/js/main.9e7c0804.js",
+    "main.css": "/medicine-delivery-app/static/css/main.733820e9.css",
+    "main.js": "/medicine-delivery-app/static/js/main.6ef54fea.js",
     "static/js/380.496a3ee6.chunk.js": "/medicine-delivery-app/static/js/380.496a3ee6.chunk.js",
-    "static/js/829.d341917e.chunk.js": "/medicine-delivery-app/static/js/829.d341917e.chunk.js",
+    "static/js/829.450d4c44.chunk.js": "/medicine-delivery-app/static/js/829.450d4c44.chunk.js",
     "static/js/388.2c1bf91c.chunk.js": "/medicine-delivery-app/static/js/388.2c1bf91c.chunk.js",
     "static/media/stock-illustration-drugs-and-pills.jpg": "/medicine-delivery-app/static/media/stock-illustration-drugs-and-pills.a082834e21f168e479a7.jpg",
-    "static/media/sprite.svg": "/medicine-delivery-app/static/media/sprite.0be5c128f03b9af2dbc7f1314d28ee5c.svg",
+    "static/media/sprite.svg": "/medicine-delivery-app/static/media/sprite.e9c6daee75be6752fba4cf081aa0e747.svg",
     "index.html": "/medicine-delivery-app/index.html",
-    "main.225435f0.css.map": "/medicine-delivery-app/static/css/main.225435f0.css.map",
-    "main.9e7c0804.js.map": "/medicine-delivery-app/static/js/main.9e7c0804.js.map",
+    "main.733820e9.css.map": "/medicine-delivery-app/static/css/main.733820e9.css.map",
+    "main.6ef54fea.js.map": "/medicine-delivery-app/static/js/main.6ef54fea.js.map",
     "380.496a3ee6.chunk.js.map": "/medicine-delivery-app/static/js/380.496a3ee6.chunk.js.map",
-    "829.d341917e.chunk.js.map": "/medicine-delivery-app/static/js/829.d341917e.chunk.js.map",
+    "829.450d4c44.chunk.js.map": "/medicine-delivery-app/static/js/829.450d4c44.chunk.js.map",
     "388.2c1bf91c.chunk.js.map": "/medicine-delivery-app/static/js/388.2c1bf91c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.225435f0.css",
-    "static/js/main.9e7c0804.js"
+    "static/css/main.733820e9.css",
+    "static/js/main.6ef54fea.js"
   ]
 }
