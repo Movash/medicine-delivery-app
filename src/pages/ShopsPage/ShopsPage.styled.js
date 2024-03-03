@@ -1,4 +1,3 @@
-// ShopsPage.styled.js
 import styled from 'styled-components';
 
 export const ShopsCont = styled.div`
@@ -70,7 +69,7 @@ export const CardContainer = styled.div`
 
 export const CardImage = styled.img`
   width: 100%;
-  max-height: 70%;
+  height: 230px;
   object-fit: cover;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
@@ -83,7 +82,6 @@ export const CardTitle = styled.h3`
 
 export const AddButton = styled.button`
   margin-bottom: 15px;
-  font-family: 'ManropeSemiBold';
   font-weight: 600;
   font-size: 14px;
   line-height: 1.43;
