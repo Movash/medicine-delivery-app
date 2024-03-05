@@ -2,13 +2,6 @@ import { styled } from 'styled-components';
 
 export const FormCont = styled('div')(() => {
   return {
-    marginTop: '100px',
-    form: {
-      width: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-    },
     input: {
       fontSize: '14px',
       lineHeight: 1.29,
@@ -16,25 +9,24 @@ export const FormCont = styled('div')(() => {
       height: '46px',
       border: '1px solid rgba(239, 237, 232, 0.3)',
       borderRadius: '12px',
-      backgroundColor: 'var(--light-active-color)',
+      backgroundColor: 'var(--second-gray-color)',
       textIndent: '12px',
       outline: 'none',
       paddingTop: '2px',
       transition: 'border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)',
       '&:hover, &:focus': {
-        borderColor: 'var(--orange-color)',
+        borderColor: 'var(--active-color)',
       },
     },
     '.inputs-cont': {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      gap: '18px',
-      marginBottom: '28px',
+      gap: '30px',
       width: '100%',
     },
     '.input-cont': {
-      width: '60%',
+      width: '50%',
     },
     '.input-error': {
       borderColor: 'var(--error-color)',
@@ -57,22 +49,6 @@ export const FormCont = styled('div')(() => {
     },
     '.success': {
       color: 'var(--success-color)',
-    },
-    '.submit-btn': {
-      fontSize: '16px',
-      lineHeight: 1.12,
-      padding: '12px 40px',
-      borderRadius: '12px',
-      marginBottom: '12px',
-      backgroundColor: 'var(--light-active-color)',
-      transition: 'background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)',
-      '&:hover, &:focus': {
-        backgroundColor: 'var(--active-color)',
-      },
-      // '&:disabled': {
-      //   color: 'rgba(239, 237, 232, 0.6)',
-      //   cursor: 'not-allowed',
-      // },
     },
   };
 });
