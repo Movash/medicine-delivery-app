@@ -11,8 +11,13 @@ import {
   CountNumber,
   XButton,
   Price,
+  AdditionalBlock,
+  ContentCartCont,
+  SelectedCardList,
+  SubmitButton,
+  SelectedTotal,
 } from './ShoppingCartPage.styled';
-import { CardTitle, CardList, ShopHeader } from '../ShopsPage/ShopsPage.styled';
+import { CardTitle, ShopHeader } from '../ShopsPage/ShopsPage.styled';
 import placeholder from '../../images/stock-illustration-drugs-and-pills.jpg';
 import UserForm from 'components/UserForm/UserForm';
 import { useEffect, useState } from 'react';
@@ -29,12 +34,12 @@ const ShoppingCartPage = () => {
     setCartItems(storedCartItems);
   }, []);
 
-    const handleAddOne = index => {
-      const updatedCartItems = [...cartItems];
-      updatedCartItems[index].count++;
-      setCartItems(updatedCartItems);
-      setStorageData('cartItems', updatedCartItems);
-    };
+  const handleAddOne = index => {
+    const updatedCartItems = [...cartItems];
+    updatedCartItems[index].count++;
+    setCartItems(updatedCartItems);
+    setStorageData('cartItems', updatedCartItems);
+  };
 
   const handleSubtractOne = index => {
     const updatedCartItems = [...cartItems];
@@ -55,47 +60,57 @@ const ShoppingCartPage = () => {
 
   return (
     <ShoppingCartCont>
-      <LeftBlock>
-        <UserForm />
-      </LeftBlock>
-      <RightBlock>
-        <ShopHeader>Selected drugs</ShopHeader>
-        <CardList>
-          {cartItems.map((medicine, index) => (
-            <SelectedCardContainer key={medicine._id}>
-              <XButton onClick={() => handleRemoveFromCart(index)}>
-                <svg width="32" height="32" viewBox="0 0 16 16">
-                  <use href={`${sprite}#icon-x`} />
-                </svg>
-              </XButton>
-              <SelectedCardImage
-                src={
-                  medicine.photo ? `${baseURL}/${medicine.photo}` : placeholder
-                }
-                alt={medicine.name}
-              />
-              <CardTitleCont>
-                <CardTitle>
-                  {medicine.name.charAt(0).toUpperCase() +
-                    medicine.name.slice(1)}
-                </CardTitle>
-                <Price>Price: {medicine.price * (medicine.count || 1)}$</Price>
-                <CountCont>
-                  <CountNumber>{medicine.count}</CountNumber>
-                  <ButtonsCont>
-                    <CounterButton onClick={() => handleAddOne(index)}>
-                      ⬆
-                    </CounterButton>
-                    <CounterButton onClick={() => handleSubtractOne(index)}>
-                      ⬇
-                    </CounterButton>
-                  </ButtonsCont>
-                </CountCont>
-              </CardTitleCont>
-            </SelectedCardContainer>
-          ))}
-        </CardList>
-      </RightBlock>
+      <ContentCartCont>
+        <LeftBlock>
+          <UserForm />
+        </LeftBlock>
+        <RightBlock>
+          <ShopHeader>Selected drugs</ShopHeader>
+          <SelectedCardList>
+            {cartItems.map((medicine, index) => (
+              <SelectedCardContainer key={medicine._id}>
+                <XButton onClick={() => handleRemoveFromCart(index)}>
+                  <svg width="32" height="32" viewBox="0 0 16 16">
+                    <use href={`${sprite}#icon-x`} />
+                  </svg>
+                </XButton>
+                <SelectedCardImage
+                  src={
+                    medicine.photo
+                      ? `${baseURL}/${medicine.photo}`
+                      : placeholder
+                  }
+                  alt={medicine.name}
+                />
+                <CardTitleCont>
+                  <CardTitle>
+                    {medicine.name.charAt(0).toUpperCase() +
+                      medicine.name.slice(1)}
+                  </CardTitle>
+                  <Price>
+                    Price: {medicine.price * (medicine.count || 1)}$
+                  </Price>
+                  <CountCont>
+                    <CountNumber>{medicine.count}</CountNumber>
+                    <ButtonsCont>
+                      <CounterButton onClick={() => handleAddOne(index)}>
+                        ⬆
+                      </CounterButton>
+                      <CounterButton onClick={() => handleSubtractOne(index)}>
+                        ⬇
+                      </CounterButton>
+                    </ButtonsCont>
+                  </CountCont>
+                </CardTitleCont>
+              </SelectedCardContainer>
+            ))}
+          </SelectedCardList>
+        </RightBlock>
+      </ContentCartCont>
+      <AdditionalBlock>
+        <SelectedTotal>Total price: 999</SelectedTotal>
+        <SubmitButton type="button">Submit</SubmitButton>
+      </AdditionalBlock>
     </ShoppingCartCont>
   );
 };
