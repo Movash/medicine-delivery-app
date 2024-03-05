@@ -7,10 +7,15 @@
   --light-active-color: #ffc04d;
   --white-color: #fff;
   --gray-color: #f7f7fb;
-  --second-gray-color: #f9f9f9;
+  --second-gray-color: #dcdcdc;
   --third-gray-color: #8a8a89;
   --black-color: #121417;
   --light-black-color: #363535;
+  --black-opacity-50-color: rgba(18, 20, 23, 0.5);
+  --black-opacity-20-color: rgba(18, 20, 23, 0.2);
+  --black-opacity-5-color: rgba(18, 20, 23, 0.05);
+  --success-color: #3cbf61;
+  --error-color: #d80027;
 
 #root {
   height: 100vh; 
