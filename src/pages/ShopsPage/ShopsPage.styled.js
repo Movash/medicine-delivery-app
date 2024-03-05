@@ -1,23 +1,26 @@
 import styled from 'styled-components';
 
 export const ShopsCont = styled.div`
-  margin-top: 100px;
+  margin-top: 60px;
   display: flex;
 `;
 
 export const LeftBlock = styled.div`
   width: 25%;
-  border-right: 1px solid var(--blue-color);
 `;
 
 export const RightBlock = styled.div`
+  height: calc(100vh - 60px);
   width: 75%;
+  border-left: 3px solid var(--sky-blue-color);
+  background-color: var(--gray-color);
 `;
 
 export const ShopHeader = styled.h2`
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 `;
 
 export const ShopList = styled.ul`
@@ -53,7 +56,8 @@ export const CardList = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  overflow-y: auto;
+  height: calc(100% - 87.6px);
 `;
 
 export const CardContainer = styled.div`
@@ -65,6 +69,8 @@ export const CardContainer = styled.div`
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--white-color);
+  margin: 10px;
 `;
 
 export const CardImage = styled.img`
@@ -78,6 +84,8 @@ export const CardImage = styled.img`
 export const CardTitle = styled.h3`
   font-size: 18px;
   margin: 15px 0;
+  font-weight: 600;
+  font-size: 28px;
 `;
 
 export const AddButton = styled.button`
