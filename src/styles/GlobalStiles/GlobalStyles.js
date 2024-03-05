@@ -60,6 +60,16 @@ button {
   cursor: pointer;
   border: none;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--black-opacity-5-color);
+  border-radius: 24px;
+  /* border: 8px solid var(--gray-color); */
+}
 `;
 
 export default GlobalStyle;
