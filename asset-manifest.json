@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/medicine-delivery-app/static/css/main.31b11fc6.css",
-    "main.js": "/medicine-delivery-app/static/js/main.5fcde2bf.js",
+    "main.js": "/medicine-delivery-app/static/js/main.a99f9f91.js",
     "static/js/125.7dbe6165.chunk.js": "/medicine-delivery-app/static/js/125.7dbe6165.chunk.js",
-    "static/js/829.60478ab9.chunk.js": "/medicine-delivery-app/static/js/829.60478ab9.chunk.js",
+    "static/js/829.282c9fad.chunk.js": "/medicine-delivery-app/static/js/829.282c9fad.chunk.js",
     "static/js/568.83ac3e26.chunk.js": "/medicine-delivery-app/static/js/568.83ac3e26.chunk.js",
     "static/js/294.ba76850f.chunk.js": "/medicine-delivery-app/static/js/294.ba76850f.chunk.js",
     "static/media/stock-illustration-drugs-and-pills.jpg": "/medicine-delivery-app/static/media/stock-illustration-drugs-and-pills.a082834e21f168e479a7.jpg",
     "static/media/sprite.svg": "/medicine-delivery-app/static/media/sprite.e9c6daee75be6752fba4cf081aa0e747.svg",
     "index.html": "/medicine-delivery-app/index.html",
     "main.31b11fc6.css.map": "/medicine-delivery-app/static/css/main.31b11fc6.css.map",
-    "main.5fcde2bf.js.map": "/medicine-delivery-app/static/js/main.5fcde2bf.js.map",
+    "main.a99f9f91.js.map": "/medicine-delivery-app/static/js/main.a99f9f91.js.map",
     "125.7dbe6165.chunk.js.map": "/medicine-delivery-app/static/js/125.7dbe6165.chunk.js.map",
-    "829.60478ab9.chunk.js.map": "/medicine-delivery-app/static/js/829.60478ab9.chunk.js.map",
+    "829.282c9fad.chunk.js.map": "/medicine-delivery-app/static/js/829.282c9fad.chunk.js.map",
     "568.83ac3e26.chunk.js.map": "/medicine-delivery-app/static/js/568.83ac3e26.chunk.js.map",
     "294.ba76850f.chunk.js.map": "/medicine-delivery-app/static/js/294.ba76850f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31b11fc6.css",
-    "static/js/main.5fcde2bf.js"
+    "static/js/main.a99f9f91.js"
   ]
 }
