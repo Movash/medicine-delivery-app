@@ -118,7 +118,7 @@ export const SelectedCardList = styled.div`
 export const SelectedTotal = styled.p`
   margin-right: 200px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.43;
 `;
 
@@ -136,4 +136,8 @@ export const SubmitButton = styled.button`
   &:focus {
     background-color: var(--blue-color);
   }
+`;
+
+export const SelectedTotalNumber = styled.span`
+  color: var(--sky-blue-color);
 `;
