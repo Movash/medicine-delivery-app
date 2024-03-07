@@ -1,37 +1,18 @@
-import { useFormik } from 'formik';
-import { formSchema } from '../../schemas/FormSchema/FormSchema';
 import { FormCont } from './UserForm.styled';
 import sprite from '../../images/sprite.svg';
 
-const UserForm = () => {
-  const onSubmit = ({ name, email, phone, address }, actions) => {
-    console.log(name);
-    console.log(email);
-    console.log(phone);
-    console.log(address);
-  };
-
-  const formik = useFormik({
-    initialValues: {
-      name: '',
-      email: '',
-      phone: '',
-      address: '',
-    },
-    validationSchema: formSchema,
-    onSubmit,
-  });
+const UserForm = ({ formik }) => {
 
   return (
     <FormCont>
-      <form onSubmit={formik.handleSubmit}>
+      <form id="userForm" onSubmit={formik.handleSubmit}>
         <div className="inputs-cont">
           <div className="input-cont">
             <input
               autoComplete="off"
               name="name"
               type="text"
-              placeholder="Name"
+              placeholder="Name*"
               value={formik.values.name}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -72,7 +53,7 @@ const UserForm = () => {
               autoComplete="off"
               name="email"
               type="email"
-              placeholder="Email"
+              placeholder="Email*"
               value={formik.values.email}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -113,7 +94,7 @@ const UserForm = () => {
               autoComplete="off"
               name="phone"
               type="tel"
-              placeholder="Phone"
+              placeholder="Phone*"
               value={formik.values.phone}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -154,7 +135,7 @@ const UserForm = () => {
               autoComplete="off"
               name="address"
               type="text"
-              placeholder="Address"
+              placeholder="Address*"
               value={formik.values.address}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -191,13 +172,6 @@ const UserForm = () => {
               )}
           </div>
         </div>
-        {/* <button
-          type="submit"
-          className="submit-btn"
-          disabled={formik.isSubmitting}
-        >
-          Submit
-        </button> */}
       </form>
     </FormCont>
   );
