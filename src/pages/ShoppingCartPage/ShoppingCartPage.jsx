@@ -16,6 +16,7 @@ import {
   SelectedCardList,
   SubmitButton,
   SelectedTotal,
+  SelectedTotalNumber,
 } from './ShoppingCartPage.styled';
 import { CardTitle, ShopHeader } from '../ShopsPage/ShopsPage.styled';
 import placeholder from '../../images/stock-illustration-drugs-and-pills.jpg';
@@ -23,6 +24,8 @@ import UserForm from 'components/UserForm/UserForm';
 import { useEffect, useState } from 'react';
 import { getStorageData, setStorageData } from 'helpers/storage';
 import sprite from '../../images/sprite.svg';
+import { useFormik } from 'formik';
+import { formSchema } from 'schemas/FormSchema/FormSchema';
 
 const baseURL = 'https://nodejs-medicine-delivery.onrender.com';
 
@@ -36,7 +39,7 @@ const ShoppingCartPage = () => {
 
   const handleAddOne = index => {
     const updatedCartItems = [...cartItems];
-    updatedCartItems[index].count++;
+    updatedCartItems[index].count = (updatedCartItems[index].count || 1) + 1;
     setCartItems(updatedCartItems);
     setStorageData('cartItems', updatedCartItems);
   };
@@ -58,11 +61,46 @@ const ShoppingCartPage = () => {
     setStorageData('cartItems', updatedCartItems);
   };
 
+  const calculateTotalPrice = () => {
+    let totalPrice = 0;
+    cartItems.forEach(item => {
+      totalPrice += item.price * (item.count || 1);
+    });
+    return totalPrice;
+  };
+
+  const onSubmit = async ({ name, email, phone, address }, actions) => {
+    submit({
+      name: name,
+      email: email,
+      phone: phone,
+      address: address,
+    });
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    actions.resetForm();
+  };
+
+  const submit = body => {
+    console.log(calculateTotalPrice());
+    console.log(body);
+  };
+
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      phone: '',
+      address: '',
+    },
+    validationSchema: formSchema,
+    onSubmit,
+  });
+
   return (
     <ShoppingCartCont>
       <ContentCartCont>
         <LeftBlock>
-          <UserForm />
+          <UserForm formik={formik} />
         </LeftBlock>
         <RightBlock>
           <ShopHeader>Selected drugs</ShopHeader>
@@ -91,7 +129,7 @@ const ShoppingCartPage = () => {
                     Price: {medicine.price * (medicine.count || 1)}$
                   </Price>
                   <CountCont>
-                    <CountNumber>{medicine.count}</CountNumber>
+                    <CountNumber>{cartItems[index].count || 1}</CountNumber>
                     <ButtonsCont>
                       <CounterButton onClick={() => handleAddOne(index)}>
                         ⬆
@@ -108,8 +146,17 @@ const ShoppingCartPage = () => {
         </RightBlock>
       </ContentCartCont>
       <AdditionalBlock>
-        <SelectedTotal>Total price: 999</SelectedTotal>
-        <SubmitButton type="button">Submit</SubmitButton>
+        <SelectedTotal>
+          Total price:{' '}
+          <SelectedTotalNumber>{calculateTotalPrice()}$</SelectedTotalNumber>
+        </SelectedTotal>
+        <SubmitButton
+          type="submit"
+          disabled={formik.isSubmitting}
+          form="userForm"
+        >
+          Submit
+        </SubmitButton>
       </AdditionalBlock>
     </ShoppingCartCont>
   );

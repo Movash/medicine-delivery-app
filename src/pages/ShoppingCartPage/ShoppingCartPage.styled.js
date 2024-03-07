@@ -136,6 +136,11 @@ export const SubmitButton = styled.button`
   &:focus {
     background-color: var(--blue-color);
   }
+  &:disabled {
+    color: rgba(239, 237, 232, 0.6);
+    background-color: var(--light-black-color);
+    cursor: not-allowed;
+  }
 `;
 
 export const SelectedTotalNumber = styled.span`
