@@ -68,21 +68,32 @@ const ShoppingCartPage = () => {
     });
     return totalPrice;
   };
-
+  
   const onSubmit = async ({ name, email, phone, address }, actions) => {
-    submit({
+    const orderedMedicines = cartItems.map(item => ({
+      medicine: item.name,
+      quantity: item.count || 1,
+      price: item.price * (item.count || 1),
+    }));
+
+    const totalPrice = calculateTotalPrice();
+
+    const body = {
       name: name,
       email: email,
       phone: phone,
       address: address,
-    });
+      orderedMedicines: orderedMedicines,
+      totalPrice: totalPrice,
+    };
+
+    submit(body);
     await new Promise(resolve => setTimeout(resolve, 1000));
     actions.resetForm();
   };
 
   const submit = body => {
-    console.log(calculateTotalPrice());
-    console.log(body);
+    console.log('Submitted data:', body);
   };
 
   const formik = useFormik({
