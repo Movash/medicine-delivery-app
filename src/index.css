@@ -16,6 +16,9 @@
   --black-opacity-5-color: rgba(18, 20, 23, 0.05);
   --success-color: #3cbf61;
   --error-color: #d80027;
+  --disabled-color: #cccccc;
+  --disabled-text-color: #666666;
+
 
 #root {
   height: 100vh; 
