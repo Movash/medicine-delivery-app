@@ -26,6 +26,7 @@ import { getStorageData, setStorageData } from 'helpers/storage';
 import sprite from '../../images/sprite.svg';
 import { useFormik } from 'formik';
 import { formSchema } from 'schemas/FormSchema/FormSchema';
+import { addOrder } from 'api/Pharmacy.api';
 
 const baseURL = 'https://nodejs-medicine-delivery.onrender.com';
 
@@ -87,13 +88,10 @@ const ShoppingCartPage = () => {
       totalPrice: totalPrice,
     };
 
-    submit(body);
+    await addOrder(body)
+    
     await new Promise(resolve => setTimeout(resolve, 1000));
     actions.resetForm();
-  };
-
-  const submit = body => {
-    console.log('Submitted data:', body);
   };
 
   const formik = useFormik({
