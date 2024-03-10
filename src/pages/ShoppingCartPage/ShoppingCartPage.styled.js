@@ -137,8 +137,8 @@ export const SubmitButton = styled.button`
     background-color: var(--blue-color);
   }
   &:disabled {
-    color: rgba(239, 237, 232, 0.6);
-    background-color: var(--light-black-color);
+    color: var(--disabled-text-color);
+    background-color: var(--disabled-color);
     cursor: not-allowed;
   }
 `;
