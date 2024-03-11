@@ -52,7 +52,7 @@ export const ShopItem = styled.li`
   }
 `;
 
-export const CardList = styled.div`
+export const CardList = styled.ul`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -60,7 +60,8 @@ export const CardList = styled.div`
   height: calc(100% - 87.6px);
 `;
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.li`
+  position: relative;
   width: 400px;
   height: 350px;
   display: flex;
@@ -104,4 +105,14 @@ export const AddButton = styled.button`
   &:focus {
     background-color: var(--blue-color);
   }
+`;
+
+export const SvgHeart = styled.svg`
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 24px;
+  height: 24px;
+  fill: ${({ $active }) =>
+    $active ? 'var(--sky-blue-color)' : 'var(--white-color)'};
 `;
