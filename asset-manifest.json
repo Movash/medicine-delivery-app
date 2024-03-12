@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/medicine-delivery-app/static/css/main.404081a6.css",
-    "main.js": "/medicine-delivery-app/static/js/main.6bc28d4f.js",
-    "static/js/603.2caf18bb.chunk.js": "/medicine-delivery-app/static/js/603.2caf18bb.chunk.js",
-    "static/js/624.22451af3.chunk.js": "/medicine-delivery-app/static/js/624.22451af3.chunk.js",
+    "main.js": "/medicine-delivery-app/static/js/main.f4487688.js",
+    "static/js/197.3c505bab.chunk.js": "/medicine-delivery-app/static/js/197.3c505bab.chunk.js",
+    "static/js/624.8a8354fb.chunk.js": "/medicine-delivery-app/static/js/624.8a8354fb.chunk.js",
     "static/js/294.ba76850f.chunk.js": "/medicine-delivery-app/static/js/294.ba76850f.chunk.js",
     "static/js/568.83ac3e26.chunk.js": "/medicine-delivery-app/static/js/568.83ac3e26.chunk.js",
     "static/media/stock-illustration-drugs-and-pills.jpg": "/medicine-delivery-app/static/media/stock-illustration-drugs-and-pills.a082834e21f168e479a7.jpg",
     "static/media/sprite.svg": "/medicine-delivery-app/static/media/sprite.43412f926b759648a03fb442a9290726.svg",
     "index.html": "/medicine-delivery-app/index.html",
     "main.404081a6.css.map": "/medicine-delivery-app/static/css/main.404081a6.css.map",
-    "main.6bc28d4f.js.map": "/medicine-delivery-app/static/js/main.6bc28d4f.js.map",
-    "603.2caf18bb.chunk.js.map": "/medicine-delivery-app/static/js/603.2caf18bb.chunk.js.map",
-    "624.22451af3.chunk.js.map": "/medicine-delivery-app/static/js/624.22451af3.chunk.js.map",
+    "main.f4487688.js.map": "/medicine-delivery-app/static/js/main.f4487688.js.map",
+    "197.3c505bab.chunk.js.map": "/medicine-delivery-app/static/js/197.3c505bab.chunk.js.map",
+    "624.8a8354fb.chunk.js.map": "/medicine-delivery-app/static/js/624.8a8354fb.chunk.js.map",
     "294.ba76850f.chunk.js.map": "/medicine-delivery-app/static/js/294.ba76850f.chunk.js.map",
     "568.83ac3e26.chunk.js.map": "/medicine-delivery-app/static/js/568.83ac3e26.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.404081a6.css",
-    "static/js/main.6bc28d4f.js"
+    "static/js/main.f4487688.js"
   ]
 }
