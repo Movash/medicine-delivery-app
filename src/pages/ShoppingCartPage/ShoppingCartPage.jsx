@@ -18,7 +18,6 @@ import {
   SelectedTotal,
   SelectedTotalNumber,
 } from './ShoppingCartPage.styled';
-import { CardTitle, ShopHeader } from '../ShopsPage/ShopsPage.styled';
 import placeholder from '../../images/stock-illustration-drugs-and-pills.jpg';
 import UserForm from 'components/UserForm/UserForm';
 import { useEffect, useState } from 'react';
@@ -27,6 +26,7 @@ import sprite from '../../images/sprite.svg';
 import { useFormik } from 'formik';
 import { formSchema } from 'schemas/FormSchema/FormSchema';
 import { addOrder } from 'api/Pharmacy.api';
+import { CardTitle, ShopHeader } from 'styles/MainComponents/MainComponents.styled';
 
 const baseURL = 'https://nodejs-medicine-delivery.onrender.com';
 
