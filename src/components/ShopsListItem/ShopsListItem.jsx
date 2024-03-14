@@ -1,9 +1,10 @@
 import { getStorageData, setStorageData } from "helpers/storage";
-import { AddButton, CardContainer, CardImage, CardTitle, SvgHeart } from "pages/ShopsPage/ShopsPage.styled";
+import { AddButton, CardContainer, CardImage, SvgHeart } from "./ShopsListItem.styled";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import sprite from '../../images/sprite.svg';
 import placeholder from '../../images/stock-illustration-drugs-and-pills.jpg';
+import { CardTitle } from "styles/MainComponents/MainComponents.styled";
 
 const baseURL = 'https://nodejs-medicine-delivery.onrender.com';
 
