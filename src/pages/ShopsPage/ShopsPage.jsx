@@ -5,17 +5,11 @@ import {
   RightBlock,
   ShopList,
   ShopItem,
-  ShopHeader,
-  // CardContainer,
-  // CardImage,
-  // CardTitle,
-  // AddButton,
-  // CardList,
-  // SvgHeart,
 } from './ShopsPage.styled';
 import { getAll } from 'api/Pharmacy.api';
 import Loader from 'components/Loader/Loader';
 import ShopsList from 'components/ShopsList/ShopsList';
+import { ShopHeader } from 'styles/MainComponents/MainComponents.styled';
 
 const ShopsPage = () => {
   const [shops, setShops] = useState([]);
