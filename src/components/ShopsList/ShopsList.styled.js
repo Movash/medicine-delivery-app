@@ -5,5 +5,5 @@ export const CardList = styled.ul`
   justify-content: center;
   flex-wrap: wrap;
   overflow-y: auto;
-  height: calc(100% - 87.6px);
+  height: calc(100% - 87.6px - 48px);
 `;
