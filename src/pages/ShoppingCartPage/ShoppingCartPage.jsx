@@ -2,72 +2,47 @@ import {
   ShoppingCartCont,
   LeftBlock,
   RightBlock,
-  SelectedCardContainer,
-  SelectedCardImage,
-  CardTitleCont,
-  CountCont,
-  ButtonsCont,
-  CounterButton,
-  CountNumber,
-  XButton,
-  Price,
   AdditionalBlock,
   ContentCartCont,
-  SelectedCardList,
   SubmitButton,
   SelectedTotal,
   SelectedTotalNumber,
 } from './ShoppingCartPage.styled';
-import placeholder from '../../images/stock-illustration-drugs-and-pills.jpg';
 import UserForm from 'components/UserForm/UserForm';
 import { useEffect, useState } from 'react';
 import { getStorageData, setStorageData } from 'helpers/storage';
-import sprite from '../../images/sprite.svg';
 import { useFormik } from 'formik';
 import { formSchema } from 'schemas/FormSchema/FormSchema';
 import { addOrder } from 'api/Pharmacy.api';
-import { CardTitle, ShopHeader } from 'styles/MainComponents/MainComponents.styled';
-
-const baseURL = 'https://nodejs-medicine-delivery.onrender.com';
+import { ShopHeader } from 'styles/MainComponents/MainComponents.styled';
+import ShoppingCartList from 'components/ShoppingCartList/ShoppingCartList';
 
 const ShoppingCartPage = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
     const storedCartItems = getStorageData('cartItems') || [];
     setCartItems(storedCartItems);
   }, []);
 
-  const handleAddOne = index => {
-    const updatedCartItems = [...cartItems];
-    updatedCartItems[index].count = (updatedCartItems[index].count || 1) + 1;
-    setCartItems(updatedCartItems);
-    setStorageData('cartItems', updatedCartItems);
-  };
-
-  const handleSubtractOne = index => {
-    const updatedCartItems = [...cartItems];
-    updatedCartItems[index].count = Math.max(
-      updatedCartItems[index].count - 1,
-      1
-    );
-    setCartItems(updatedCartItems);
-    setStorageData('cartItems', updatedCartItems);
-  };
+  useEffect(() => {
+    const calculateTotalPrice = () => {
+      let totalPrice = 0;
+      cartItems.forEach(item => {
+        totalPrice += item.price * (item.count || 1);
+      });
+      return totalPrice;
+    };
+    const totalPrice = calculateTotalPrice();
+    setTotalPrice(totalPrice);
+  }, [cartItems]);
 
   const handleRemoveFromCart = index => {
     const updatedCartItems = [...cartItems];
     updatedCartItems.splice(index, 1);
     setCartItems(updatedCartItems);
     setStorageData('cartItems', updatedCartItems);
-  };
-
-  const calculateTotalPrice = () => {
-    let totalPrice = 0;
-    cartItems.forEach(item => {
-      totalPrice += item.price * (item.count || 1);
-    });
-    return totalPrice;
   };
   
   const onSubmit = async ({ name, email, phone, address }, actions) => {
@@ -76,8 +51,6 @@ const ShoppingCartPage = () => {
       quantity: item.count || 1,
       price: item.price * (item.count || 1),
     }));
-
-    const totalPrice = calculateTotalPrice();
 
     const body = {
       name: name,
@@ -113,51 +86,16 @@ const ShoppingCartPage = () => {
         </LeftBlock>
         <RightBlock>
           <ShopHeader>Selected drugs</ShopHeader>
-          <SelectedCardList>
-            {cartItems.map((medicine, index) => (
-              <SelectedCardContainer key={medicine._id}>
-                <XButton onClick={() => handleRemoveFromCart(index)}>
-                  <svg width="32" height="32" viewBox="0 0 16 16">
-                    <use href={`${sprite}#icon-x`} />
-                  </svg>
-                </XButton>
-                <SelectedCardImage
-                  src={
-                    medicine.photo
-                      ? `${baseURL}/${medicine.photo}`
-                      : placeholder
-                  }
-                  alt={medicine.name}
-                />
-                <CardTitleCont>
-                  <CardTitle>
-                    {medicine.name.charAt(0).toUpperCase() +
-                      medicine.name.slice(1)}
-                  </CardTitle>
-                  <Price>
-                    Price: {medicine.price * (medicine.count || 1)}$
-                  </Price>
-                  <CountCont>
-                    <CountNumber>{cartItems[index].count || 1}</CountNumber>
-                    <ButtonsCont>
-                      <CounterButton onClick={() => handleAddOne(index)}>
-                        ⬆
-                      </CounterButton>
-                      <CounterButton onClick={() => handleSubtractOne(index)}>
-                        ⬇
-                      </CounterButton>
-                    </ButtonsCont>
-                  </CountCont>
-                </CardTitleCont>
-              </SelectedCardContainer>
-            ))}
-          </SelectedCardList>
+          <ShoppingCartList
+            cartItems={cartItems}
+            handleRemoveFromCart={handleRemoveFromCart}
+            setCartItems={setCartItems}
+          />
         </RightBlock>
       </ContentCartCont>
       <AdditionalBlock>
         <SelectedTotal>
-          Total price:{' '}
-          <SelectedTotalNumber>{calculateTotalPrice()}$</SelectedTotalNumber>
+          Total price: <SelectedTotalNumber>{totalPrice}$</SelectedTotalNumber>
         </SelectedTotal>
         <SubmitButton
           type="submit"
