@@ -1,15 +1,18 @@
 import ShopsListItem from 'components/ShopsListItem/ShopsListItem';
 import { getStorageData } from 'helpers/storage';
 import { CardList } from './ShopsList.styled';
+import Filter from 'components/Filter/Filter';
+import { useState } from 'react';
 
 const ShopsList = props => {
   const { selectedShop } = props;
+  const [sortedMedicines, setSortedMedicines] = useState(selectedShop.medicines);
 
   const favoriteMedicines = new Set(
     getStorageData('favoriteMedicines')?.map(med => med.name) || []
   );
 
-  const sortedMedicines = selectedShop.medicines.sort((a, b) => {
+  const sortedMedicinesByFav = sortedMedicines.sort((a, b) => {
     const aIsFavorite = favoriteMedicines.has(a.name);
     const bIsFavorite = favoriteMedicines.has(b.name);
 
@@ -18,8 +21,12 @@ const ShopsList = props => {
   
   return (
     <>
+      <Filter
+        medicines={selectedShop.medicines}
+        setSortedMedicines={setSortedMedicines}
+      />
       <CardList>
-        {sortedMedicines.map(medicine => (
+        {sortedMedicinesByFav.map(medicine => (
           <ShopsListItem medicine={medicine} key={medicine._id} />
         ))}
       </CardList>
