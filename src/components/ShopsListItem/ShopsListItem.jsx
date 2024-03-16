@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import sprite from '../../images/sprite.svg';
 import placeholder from '../../images/stock-illustration-drugs-and-pills.jpg';
-import { CardTitle } from "styles/MainComponents/MainComponents.styled";
+import { CartTitle } from "styles/MainComponents/MainComponents.styled";
 
 const baseURL = 'https://nodejs-medicine-delivery.onrender.com';
 
@@ -35,7 +35,7 @@ const ShopsListItem = props => {
         duration: 3000,
         position: 'top-center',
       });
-      const updatedCartItems = [...cartItems, medicine];
+      const updatedCartItems = [medicine, ...cartItems];
       setStorageData('cartItems', updatedCartItems);
     }
   };
@@ -66,9 +66,9 @@ const ShopsListItem = props => {
         src={medicine.photo ? `${baseURL}/${medicine.photo}` : placeholder}
         alt={medicine.name}
       />
-      <CardTitle>
+      <CartTitle>
         {medicine.name.charAt(0).toUpperCase() + medicine.name.slice(1)}
-      </CardTitle>
+      </CartTitle>
       <AddButton onClick={() => handleAddToCart(medicine)}>
         Add to Cart
       </AddButton>
