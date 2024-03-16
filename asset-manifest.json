@@ -1,23 +1,25 @@
 {
   "files": {
     "main.css": "/medicine-delivery-app/static/css/main.404081a6.css",
-    "main.js": "/medicine-delivery-app/static/js/main.368c01d1.js",
-    "static/js/749.c85b9023.chunk.js": "/medicine-delivery-app/static/js/749.c85b9023.chunk.js",
-    "static/js/624.1c0113ba.chunk.js": "/medicine-delivery-app/static/js/624.1c0113ba.chunk.js",
-    "static/js/294.ba76850f.chunk.js": "/medicine-delivery-app/static/js/294.ba76850f.chunk.js",
-    "static/js/568.83ac3e26.chunk.js": "/medicine-delivery-app/static/js/568.83ac3e26.chunk.js",
+    "main.js": "/medicine-delivery-app/static/js/main.f477e338.js",
+    "static/js/517.d3be98ca.chunk.js": "/medicine-delivery-app/static/js/517.d3be98ca.chunk.js",
+    "static/js/944.1b34d470.chunk.js": "/medicine-delivery-app/static/js/944.1b34d470.chunk.js",
+    "static/js/979.d3b42982.chunk.js": "/medicine-delivery-app/static/js/979.d3b42982.chunk.js",
+    "static/js/619.1ebe4033.chunk.js": "/medicine-delivery-app/static/js/619.1ebe4033.chunk.js",
+    "static/js/568.4a048802.chunk.js": "/medicine-delivery-app/static/js/568.4a048802.chunk.js",
     "static/media/stock-illustration-drugs-and-pills.jpg": "/medicine-delivery-app/static/media/stock-illustration-drugs-and-pills.a082834e21f168e479a7.jpg",
     "static/media/sprite.svg": "/medicine-delivery-app/static/media/sprite.43412f926b759648a03fb442a9290726.svg",
     "index.html": "/medicine-delivery-app/index.html",
     "main.404081a6.css.map": "/medicine-delivery-app/static/css/main.404081a6.css.map",
-    "main.368c01d1.js.map": "/medicine-delivery-app/static/js/main.368c01d1.js.map",
-    "749.c85b9023.chunk.js.map": "/medicine-delivery-app/static/js/749.c85b9023.chunk.js.map",
-    "624.1c0113ba.chunk.js.map": "/medicine-delivery-app/static/js/624.1c0113ba.chunk.js.map",
-    "294.ba76850f.chunk.js.map": "/medicine-delivery-app/static/js/294.ba76850f.chunk.js.map",
-    "568.83ac3e26.chunk.js.map": "/medicine-delivery-app/static/js/568.83ac3e26.chunk.js.map"
+    "main.f477e338.js.map": "/medicine-delivery-app/static/js/main.f477e338.js.map",
+    "517.d3be98ca.chunk.js.map": "/medicine-delivery-app/static/js/517.d3be98ca.chunk.js.map",
+    "944.1b34d470.chunk.js.map": "/medicine-delivery-app/static/js/944.1b34d470.chunk.js.map",
+    "979.d3b42982.chunk.js.map": "/medicine-delivery-app/static/js/979.d3b42982.chunk.js.map",
+    "619.1ebe4033.chunk.js.map": "/medicine-delivery-app/static/js/619.1ebe4033.chunk.js.map",
+    "568.4a048802.chunk.js.map": "/medicine-delivery-app/static/js/568.4a048802.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.404081a6.css",
-    "static/js/main.368c01d1.js"
+    "static/js/main.f477e338.js"
   ]
 }
