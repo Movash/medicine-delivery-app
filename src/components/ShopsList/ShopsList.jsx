@@ -2,11 +2,15 @@ import ShopsListItem from 'components/ShopsListItem/ShopsListItem';
 import { getStorageData } from 'helpers/storage';
 import { CardList } from './ShopsList.styled';
 import Filter from 'components/Filter/Filter';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const ShopsList = props => {
   const { selectedShop } = props;
   const [sortedMedicines, setSortedMedicines] = useState(selectedShop.medicines);
+
+  useEffect(() => {
+    setSortedMedicines(selectedShop.medicines);
+  }, [selectedShop]);
 
   const favoriteMedicines = new Set(
     getStorageData('favoriteMedicines')?.map(med => med.name) || []
@@ -18,7 +22,7 @@ const ShopsList = props => {
 
     return aIsFavorite === bIsFavorite ? 0 : aIsFavorite ? -1 : 1;
   });
-  
+
   return (
     <>
       <Filter
