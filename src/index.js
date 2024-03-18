@@ -11,7 +11,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter basename="/">
       <GlobalStyle />
       <App />
-      <Toaster />
+      <Toaster
+        toastOptions={{
+          className: '',
+          style: {
+            marginTop: '-8px',
+          },
+        }}
+      />
     </BrowserRouter>
   </React.StrictMode>
 );
