@@ -28,7 +28,7 @@ export const CardContainer = styled.li`
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: var(--white-color);
+  background-color: var(--gray-color);
   margin: 10px;
 `;
 
@@ -48,4 +48,19 @@ export const SvgHeart = styled.svg`
   height: 24px;
   fill: ${({ $active }) =>
     $active ? 'var(--sky-blue-color)' : 'var(--white-color)'};
+`;
+
+export const PriceCont = styled.div`
+  position: absolute;
+  top: 20px;
+  left: 0%;
+  background-color: var(--sky-blue-color);
+  width: 40px;
+  height: 30px;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color);
+  font-weight: 600;
 `;
