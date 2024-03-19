@@ -1,10 +1,10 @@
 import { getStorageData, setStorageData } from "helpers/storage";
-import { AddButton, CardContainer, CardImage, SvgHeart } from "./ShopsListItem.styled";
+import { AddButton, CardContainer, CardImage, PriceCont, SvgHeart } from "./ShopsListItem.styled";
 import { useEffect, useState } from "react";
-import toast from "react-hot-toast";
 import sprite from '../../images/sprite.svg';
 import placeholder from '../../images/stock-illustration-drugs-and-pills.jpg';
 import { CartTitle } from "styles/MainComponents/MainComponents.styled";
+import { showToast } from "helpers/toast";
 
 const baseURL = 'https://nodejs-medicine-delivery.onrender.com';
 
@@ -26,15 +26,9 @@ const ShopsListItem = props => {
     );
 
     if (isItemAlreadyAdded) {
-      toast.error('Already added', {
-        duration: 3000,
-        position: 'top-center',
-      });
+      showToast('error', 'Already added');
     } else {
-      toast.success('Successfully added to shopping cart', {
-        duration: 3000,
-        position: 'top-center',
-      });
+      showToast('success', 'Successfully added to shopping cart');
       const updatedCartItems = [medicine, ...cartItems];
       setStorageData('cartItems', updatedCartItems);
     }
@@ -62,6 +56,7 @@ const ShopsListItem = props => {
           href={`${sprite}#icon-heart-${isHeartActive ? 'active' : 'normal'}`}
         />
       </SvgHeart>
+      <PriceCont>{medicine.price}$</PriceCont>
       <CardImage
         src={medicine.photo ? `${baseURL}/${medicine.photo}` : placeholder}
         alt={medicine.name}
