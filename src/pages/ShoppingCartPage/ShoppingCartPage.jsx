@@ -7,6 +7,9 @@ import {
   SubmitButton,
   SelectedTotal,
   SelectedTotalNumber,
+  EmptyCart,
+  ShopsSpan,
+  EmptyCartCont,
 } from './ShoppingCartPage.styled';
 import UserForm from 'components/UserForm/UserForm';
 import { useEffect, useState } from 'react';
@@ -16,6 +19,8 @@ import { formSchema } from 'schemas/FormSchema/FormSchema';
 import { addOrder } from 'api/Pharmacy.api';
 import { ShopHeader } from 'styles/MainComponents/MainComponents.styled';
 import ShoppingCartList from 'components/ShoppingCartList/ShoppingCartList';
+import { Link } from 'react-router-dom';
+import { showToast } from 'helpers/toast';
 
 const ShoppingCartPage = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -44,13 +49,25 @@ const ShoppingCartPage = () => {
     setCartItems(updatedCartItems);
     setStorageData('cartItems', updatedCartItems);
   };
-  
+
+  const handleSubmit = () => {
+    if (!formik.dirty || !formik.isValid) {
+      showToast('error', 'Please fill in all required fields correctly');
+      return;
+    }
+  };
+
   const onSubmit = async ({ name, email, phone, address }, actions) => {
     const orderedMedicines = cartItems.map(item => ({
       medicine: item.name,
       quantity: item.count || 1,
       price: item.price * (item.count || 1),
     }));
+
+    if (orderedMedicines.length === 0) {
+      showToast('error', 'Your cart is empty. Add some medicines');
+      return;
+    }
 
     const body = {
       name: name,
@@ -61,8 +78,8 @@ const ShoppingCartPage = () => {
       totalPrice: totalPrice,
     };
 
-    await addOrder(body)
-    
+    await addOrder(body);
+
     await new Promise(resolve => setTimeout(resolve, 1000));
     actions.resetForm();
   };
@@ -86,11 +103,23 @@ const ShoppingCartPage = () => {
         </LeftBlock>
         <RightBlock>
           <ShopHeader>Selected drugs</ShopHeader>
-          <ShoppingCartList
-            cartItems={cartItems}
-            handleRemoveFromCart={handleRemoveFromCart}
-            setCartItems={setCartItems}
-          />
+          {cartItems.length === 0 ? (
+            <EmptyCartCont>
+              <EmptyCart>
+                Here is empty at this moment. Go to the{' '}
+                <ShopsSpan>
+                  <Link to="/">shops</Link>
+                </ShopsSpan>{' '}
+                page and select the medicine.
+              </EmptyCart>
+            </EmptyCartCont>
+          ) : (
+            <ShoppingCartList
+              cartItems={cartItems}
+              handleRemoveFromCart={handleRemoveFromCart}
+              setCartItems={setCartItems}
+            />
+          )}
         </RightBlock>
       </ContentCartCont>
       <AdditionalBlock>
@@ -100,6 +129,7 @@ const ShoppingCartPage = () => {
         <SubmitButton
           type="submit"
           disabled={formik.isSubmitting}
+          onClick={handleSubmit}
           form="userForm"
         >
           Submit
