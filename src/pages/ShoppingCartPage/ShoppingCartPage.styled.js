@@ -62,3 +62,21 @@ export const SubmitButton = styled.button`
 export const SelectedTotalNumber = styled.span`
   color: var(--sky-blue-color);
 `;
+
+export const EmptyCartCont = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 87.6px);
+`;
+
+export const EmptyCart = styled.div`
+  font-size: 30px;
+  text-align: center;
+  width: 600px;
+`;
+
+export const ShopsSpan = styled.span`
+  color: var(--sky-blue-color);
+  text-decoration: underline;
+`;
