@@ -1,5 +1,5 @@
 import axios from 'axios';
-import toast from 'react-hot-toast';
+import { showToast } from 'helpers/toast';
 
 axios.defaults.baseURL = 'https://nodejs-medicine-delivery.onrender.com';
 
@@ -11,16 +11,10 @@ export async function getAll() {
 export async function addOrder(body) {
   try {
     const { data } = await axios.post(`/users`, body);
-    toast.success('Your order has been accepted', {
-      duration: 3000,
-      position: 'top-center',
-    });
+    showToast('success', 'Your order has been accepted');
     return data;
   } catch (error) {
-    toast.error('Something went wrong', {
-      duration: 3000,
-      position: 'top-center',
-    });
+    showToast('error', 'Something went wrong');
     throw error;
   }
 }
