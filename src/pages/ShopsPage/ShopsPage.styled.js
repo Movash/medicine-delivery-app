@@ -13,7 +13,7 @@ export const RightBlock = styled.div`
   height: calc(100vh - 60px);
   width: 75%;
   border-left: 3px solid var(--sky-blue-color);
-  background-color: var(--gray-color);
+  background-color: var(--white-color);
 `;
 
 export const ShopList = styled.ul`
