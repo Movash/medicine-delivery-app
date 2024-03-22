@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/medicine-delivery-app/static/css/main.404081a6.css",
-    "main.js": "/medicine-delivery-app/static/js/main.15f51446.js",
-    "static/js/517.d9c1b59d.chunk.js": "/medicine-delivery-app/static/js/517.d9c1b59d.chunk.js",
-    "static/js/944.785ceda7.chunk.js": "/medicine-delivery-app/static/js/944.785ceda7.chunk.js",
+    "main.js": "/medicine-delivery-app/static/js/main.ace88e99.js",
+    "static/js/517.d5bcc7be.chunk.js": "/medicine-delivery-app/static/js/517.d5bcc7be.chunk.js",
+    "static/js/944.c073b403.chunk.js": "/medicine-delivery-app/static/js/944.c073b403.chunk.js",
     "static/js/979.d3b42982.chunk.js": "/medicine-delivery-app/static/js/979.d3b42982.chunk.js",
     "static/js/619.1ebe4033.chunk.js": "/medicine-delivery-app/static/js/619.1ebe4033.chunk.js",
     "static/js/568.4a048802.chunk.js": "/medicine-delivery-app/static/js/568.4a048802.chunk.js",
@@ -11,15 +11,15 @@
     "static/media/sprite.svg": "/medicine-delivery-app/static/media/sprite.0533a6db5d54f3a659d372c02b07eba8.svg",
     "index.html": "/medicine-delivery-app/index.html",
     "main.404081a6.css.map": "/medicine-delivery-app/static/css/main.404081a6.css.map",
-    "main.15f51446.js.map": "/medicine-delivery-app/static/js/main.15f51446.js.map",
-    "517.d9c1b59d.chunk.js.map": "/medicine-delivery-app/static/js/517.d9c1b59d.chunk.js.map",
-    "944.785ceda7.chunk.js.map": "/medicine-delivery-app/static/js/944.785ceda7.chunk.js.map",
+    "main.ace88e99.js.map": "/medicine-delivery-app/static/js/main.ace88e99.js.map",
+    "517.d5bcc7be.chunk.js.map": "/medicine-delivery-app/static/js/517.d5bcc7be.chunk.js.map",
+    "944.c073b403.chunk.js.map": "/medicine-delivery-app/static/js/944.c073b403.chunk.js.map",
     "979.d3b42982.chunk.js.map": "/medicine-delivery-app/static/js/979.d3b42982.chunk.js.map",
     "619.1ebe4033.chunk.js.map": "/medicine-delivery-app/static/js/619.1ebe4033.chunk.js.map",
     "568.4a048802.chunk.js.map": "/medicine-delivery-app/static/js/568.4a048802.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.404081a6.css",
-    "static/js/main.15f51446.js"
+    "static/js/main.ace88e99.js"
   ]
 }
