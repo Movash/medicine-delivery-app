@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/332.1e536704.chunk.js","mappings":"+JAQA,UANoB,WAClB,OACEA,EAAAA,EAAAA,KAAA,OAAAC,SAAK,eAET,C","sources":["pages/HistoryPage/HistoryPage.jsx"],"sourcesContent":["import React from 'react'\n\nconst HistoryPage = () => {\n  return (\n    <div>HistoryPage</div>\n  )\n}\n\nexport default HistoryPage"],"names":["_jsx","children"],"sourceRoot":""}
