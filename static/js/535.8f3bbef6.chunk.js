@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmedicine_delivery_app=self.webpackChunkmedicine_delivery_app||[]).push([[535],{1535:function(e,n,i){i.r(n),i.d(n,{default:function(){return p}});var r,t=i(168),u=i(7924).ZP.div(r||(r=(0,t.Z)(["\n  margin-top: 60px;\n"]))),c=i(184),p=function(){return(0,c.jsx)(u,{children:"HistoryPage"})}}}]);
+//# sourceMappingURL=535.8f3bbef6.chunk.js.map
