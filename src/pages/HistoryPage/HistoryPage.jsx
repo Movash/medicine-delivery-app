@@ -1,8 +1,8 @@
-import React from 'react'
+import { HistoryCont } from './HistoryPage.styled'
 
 const HistoryPage = () => {
   return (
-    <div>HistoryPage</div>
+    <HistoryCont>HistoryPage</HistoryCont>
   )
 }
 
