@@ -4,8 +4,7 @@ import { CardList } from './ShopsList.styled';
 import Filter from 'components/Filter/Filter';
 import { useEffect, useState } from 'react';
 
-const ShopsList = props => {
-  const { selectedShop } = props;
+const ShopsList = ({ selectedShop }) => {
   const [sortedMedicines, setSortedMedicines] = useState(selectedShop.medicines);
 
   useEffect(() => {
