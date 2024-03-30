@@ -1,8 +1,7 @@
 import ShoppingCartItem from "components/ShoppingCartItem/ShoppingCartItem";
 import { SelectedCartList } from "./ShoppingCartList.styled";
 
-const ShoppingCartList = (props) => {
-  const { cartItems, handleRemoveFromCart, setCartItems } = props;
+const ShoppingCartList = ({ cartItems, handleRemoveFromCart, setCartItems }) => {
 
   return (
     <SelectedCartList>
