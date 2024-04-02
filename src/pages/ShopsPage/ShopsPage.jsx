@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { getAll } from 'api/Pharmacy.api';
+import Loader from 'components/Loader/Loader';
+import ShopsList from 'components/ShopsList/ShopsList';
 import {
   ShopsCont,
   LeftBlock,
@@ -6,9 +9,6 @@ import {
   ShopList,
   ShopItem,
 } from './ShopsPage.styled';
-import { getAll } from 'api/Pharmacy.api';
-import Loader from 'components/Loader/Loader';
-import ShopsList from 'components/ShopsList/ShopsList';
 import { ShopHeader } from 'styles/MainComponents/MainComponents.styled';
 
 const ShopsPage = () => {
