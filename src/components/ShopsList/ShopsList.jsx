@@ -1,11 +1,13 @@
+import { useEffect, useState } from 'react';
 import ShopsListItem from 'components/ShopsListItem/ShopsListItem';
 import { getStorageData } from 'helpers/storage';
-import { CardList } from './ShopsList.styled';
 import Filter from 'components/Filter/Filter';
-import { useEffect, useState } from 'react';
+import { CardList } from './ShopsList.styled';
 
 const ShopsList = ({ selectedShop }) => {
-  const [sortedMedicines, setSortedMedicines] = useState(selectedShop.medicines);
+  const [sortedMedicines, setSortedMedicines] = useState(
+    selectedShop.medicines
+  );
 
   useEffect(() => {
     setSortedMedicines(selectedShop.medicines);
