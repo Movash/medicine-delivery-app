@@ -1,3 +1,12 @@
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useFormik } from 'formik';
+import { addOrder } from 'api/Pharmacy.api';
+import UserForm from 'components/UserForm/UserForm';
+import { getStorageData, setStorageData } from 'helpers/storage';
+import { formSchema } from 'schemas/FormSchema/FormSchema';
+import ShoppingCartList from 'components/ShoppingCartList/ShoppingCartList';
+import { showToast } from 'helpers/toast';
 import {
   ShoppingCartCont,
   LeftBlock,
@@ -11,16 +20,7 @@ import {
   ShopsSpan,
   EmptyCartCont,
 } from './ShoppingCartPage.styled';
-import UserForm from 'components/UserForm/UserForm';
-import { useEffect, useState } from 'react';
-import { getStorageData, setStorageData } from 'helpers/storage';
-import { useFormik } from 'formik';
-import { formSchema } from 'schemas/FormSchema/FormSchema';
-import { addOrder } from 'api/Pharmacy.api';
 import { ShopHeader } from 'styles/MainComponents/MainComponents.styled';
-import ShoppingCartList from 'components/ShoppingCartList/ShoppingCartList';
-import { Link } from 'react-router-dom';
-import { showToast } from 'helpers/toast';
 
 const ShoppingCartPage = () => {
   const [cartItems, setCartItems] = useState([]);
