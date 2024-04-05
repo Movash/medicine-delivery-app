@@ -31,3 +31,16 @@ export const Button = styled.button`
     background-color: var(--blue-color);
   }
 `;
+
+export const formControlInline = {
+  inputBase: {
+    height: '48px',
+    width: '224px',
+    fontWeight: 500,
+    fontSize: '18px',
+    color: '#121417',
+  },
+  selectIcon: {
+    color: 'var(--black-color)',
+  },
+};
