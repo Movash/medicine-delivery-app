@@ -2,7 +2,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { FilterDescrWrap, FiltersWrap } from './Filter.styled';
+import { FilterDescrWrap, FiltersWrap, formControlInline } from './Filter.styled';
 import { useState } from 'react';
 
 const Filter = ({ medicines, setSortedMedicines }) => {
@@ -27,16 +27,8 @@ const Filter = ({ medicines, setSortedMedicines }) => {
       <FilterDescrWrap>
         <FormControl
           sx={{
-            '.MuiInputBase-formControl': {
-              height: '48px',
-              width: '224px',
-              fontWeight: 500,
-              fontSize: '18px',
-              color: '#121417',
-            },
-            '.MuiSelect-icon': {
-              color: 'var(--black-color)',
-            },
+            '.MuiInputBase-formControl': formControlInline.inputBase,
+            '.MuiSelect-icon': formControlInline.selectIcon,
           }}
         >
           <Select
