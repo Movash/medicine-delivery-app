@@ -44,3 +44,16 @@ export const formControlInline = {
     color: 'var(--black-color)',
   },
 };
+
+export const menuPaper = {
+  maxHeight: 224,
+  maxWidth: 272,
+  marginTop: 4,
+  border: '1px solid var(--black-opacity-5-color)',
+  borderRadius: '14px',
+  fontWeight: 500,
+  fontSize: '16px',
+  lineHeight: '1.25',
+  background: 'var(--white-color)',
+  color: 'var(--black-opacity-20-color)',
+};
