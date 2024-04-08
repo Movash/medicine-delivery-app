@@ -2,7 +2,12 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { FilterDescrWrap, FiltersWrap, formControlInline } from './Filter.styled';
+import {
+  FilterDescrWrap,
+  FiltersWrap,
+  formControlInline,
+  menuPaper,
+} from './Filter.styled';
 import { useState } from 'react';
 
 const Filter = ({ medicines, setSortedMedicines }) => {
@@ -34,18 +39,7 @@ const Filter = ({ medicines, setSortedMedicines }) => {
           <Select
             MenuProps={{
               PaperProps: {
-                style: {
-                  maxHeight: 224,
-                  maxWidth: 272,
-                  marginTop: 4,
-                  border: '1px solid var(--black-opacity-5-color)',
-                  borderRadius: '14px',
-                  fontWeight: 500,
-                  fontSize: '16px',
-                  lineHeight: '1.25',
-                  background: 'var(--white-color)',
-                  color: 'var(--black-opacity-20-color)',
-                },
+                style: { ...menuPaper },
               },
             }}
             sx={{
