@@ -57,3 +57,13 @@ export const menuPaper = {
   background: 'var(--white-color)',
   color: 'var(--black-opacity-20-color)',
 };
+
+export const selectSX = {
+  width: 194,
+  height: 52,
+  borderRadius: '14px',
+  background: 'var(--gray-color)',
+  '& .MuiOutlinedInput-notchedOutline': {
+    border: 'none',
+  },
+};
