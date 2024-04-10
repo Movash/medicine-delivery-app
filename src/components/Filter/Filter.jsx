@@ -7,6 +7,7 @@ import {
   FiltersWrap,
   formControlInline,
   menuPaper,
+  selectSX,
 } from './Filter.styled';
 import { useState } from 'react';
 
@@ -42,15 +43,7 @@ const Filter = ({ medicines, setSortedMedicines }) => {
                 style: { ...menuPaper },
               },
             }}
-            sx={{
-              width: 194,
-              height: 52,
-              borderRadius: '14px',
-              background: 'var(--gray-color)',
-              '& .MuiOutlinedInput-notchedOutline': {
-                border: 'none',
-              },
-            }}
+            sx={selectSX}
             value={sortOrder}
             displayEmpty
             inputProps={{ 'aria-label': 'Without label' }}
