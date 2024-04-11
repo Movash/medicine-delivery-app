@@ -67,3 +67,22 @@ export const selectSX = {
     border: 'none',
   },
 };
+
+export const menuItemSX = {
+  fontWeight: 500,
+  fontSize: '16px',
+  lineHeight: '1.25',
+  color: 'var(--black-opacity-20-color)',
+  transition: 'color 250ms cubic-bezier(0.4, 0, 0.2, 1)',
+  '&:hover': {
+    color: 'var(--black-color)',
+    background: 'none',
+  },
+  '&.Mui-selected': {
+    color: 'var(--black-color)',
+    background: 'none',
+    '&:hover': {
+      background: 'none',
+    },
+  },
+};
