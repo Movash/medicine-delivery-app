@@ -6,6 +6,7 @@ import {
   FilterDescrWrap,
   FiltersWrap,
   formControlInline,
+  menuItemSX,
   menuPaper,
   selectSX,
 } from './Filter.styled';
@@ -50,27 +51,9 @@ const Filter = ({ medicines, setSortedMedicines }) => {
             onChange={handleSortChange}
             IconComponent={KeyboardArrowDownIcon}
           >
-            <MenuItem
-              sx={{
-                fontWeight: 500,
-                fontSize: '16px',
-                lineHeight: '1.25',
-                color: 'var(--black-opacity-20-color)',
-                transition: 'color 250ms cubic-bezier(0.4, 0, 0.2, 1)',
-                '&:hover': {
-                  color: 'var(--black-color)',
-                  background: 'none',
-                },
-                '&.Mui-selected': {
-                  color: 'var(--black-color)',
-                  background: 'none',
-                  '&:hover': {
-                    background: 'none',
-                  },
-                },
-              }}
-              value=""
-            >
+            <MenuItem 
+            sx={menuItemSX} 
+            value="">
               Sort by price
             </MenuItem>
             <MenuItem
