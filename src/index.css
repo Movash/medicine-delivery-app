@@ -18,7 +18,7 @@
   --error-color: #d80027;
   --disabled-color: #cccccc;
   --disabled-text-color: #666666;
-
+  --loading-overlay: rgba(136, 136, 204, 0.2);
 
 #root {
   height: 100vh; 
