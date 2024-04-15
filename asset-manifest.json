@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/medicine-delivery-app/static/css/main.404081a6.css",
+    "main.css": "/medicine-delivery-app/static/css/main.9150ec6f.css",
     "main.js": "/medicine-delivery-app/static/js/main.e1b9a63a.js",
     "static/js/517.bd333dbb.chunk.js": "/medicine-delivery-app/static/js/517.bd333dbb.chunk.js",
     "static/js/944.6bd069e0.chunk.js": "/medicine-delivery-app/static/js/944.6bd069e0.chunk.js",
@@ -11,7 +11,7 @@
     "static/media/stock-illustration-drugs-and-pills.jpg": "/medicine-delivery-app/static/media/stock-illustration-drugs-and-pills.a082834e21f168e479a7.jpg",
     "static/media/sprite.svg": "/medicine-delivery-app/static/media/sprite.0533a6db5d54f3a659d372c02b07eba8.svg",
     "index.html": "/medicine-delivery-app/index.html",
-    "main.404081a6.css.map": "/medicine-delivery-app/static/css/main.404081a6.css.map",
+    "main.9150ec6f.css.map": "/medicine-delivery-app/static/css/main.9150ec6f.css.map",
     "main.e1b9a63a.js.map": "/medicine-delivery-app/static/js/main.e1b9a63a.js.map",
     "517.bd333dbb.chunk.js.map": "/medicine-delivery-app/static/js/517.bd333dbb.chunk.js.map",
     "944.6bd069e0.chunk.js.map": "/medicine-delivery-app/static/js/944.6bd069e0.chunk.js.map",
@@ -21,7 +21,7 @@
     "568.4a048802.chunk.js.map": "/medicine-delivery-app/static/js/568.4a048802.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.404081a6.css",
+    "static/css/main.9150ec6f.css",
     "static/js/main.e1b9a63a.js"
   ]
 }
