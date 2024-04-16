@@ -16,6 +16,6 @@ export const Overlay = styled('div')(() => {
     position: 'fixed',
     top: 0,
     left: 0,
-    background: 'rgba(136, 136, 204, 0.2)',
+    background: 'var(--loading-overlay)',
   };
 });
