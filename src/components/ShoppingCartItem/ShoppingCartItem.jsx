@@ -1,3 +1,6 @@
+import sprite from '../../images/sprite.svg';
+import placeholder from '../../images/stock-illustration-drugs-and-pills.jpg';
+import { setStorageData } from 'helpers/storage';
 import { CartTitle } from 'styles/MainComponents/MainComponents.styled';
 import {
   ButtonsCont,
@@ -10,14 +13,16 @@ import {
   SelectedCartImage,
   XButton,
 } from './ShoppingCartItem.styled';
-import sprite from '../../images/sprite.svg';
-import placeholder from '../../images/stock-illustration-drugs-and-pills.jpg';
-import { setStorageData } from 'helpers/storage';
 
 const baseURL = 'https://nodejs-medicine-delivery.onrender.com';
 
-const ShoppingCartItem = ({ medicine, index, handleRemoveFromCart, setCartItems, cartItems }) => {
-
+const ShoppingCartItem = ({
+  medicine,
+  index,
+  handleRemoveFromCart,
+  setCartItems,
+  cartItems,
+}) => {
   const handleAddOne = () => {
     const updatedCartItems = [...cartItems];
     updatedCartItems[index].count = (updatedCartItems[index].count || 1) + 1;
