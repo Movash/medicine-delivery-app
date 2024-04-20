@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/medicine-delivery-app/static/css/main.9150ec6f.css",
-    "main.js": "/medicine-delivery-app/static/js/main.30fe22db.js",
-    "static/js/517.859e4697.chunk.js": "/medicine-delivery-app/static/js/517.859e4697.chunk.js",
-    "static/js/944.150ff0d4.chunk.js": "/medicine-delivery-app/static/js/944.150ff0d4.chunk.js",
+    "main.js": "/medicine-delivery-app/static/js/main.2971b66f.js",
+    "static/js/517.f062f165.chunk.js": "/medicine-delivery-app/static/js/517.f062f165.chunk.js",
+    "static/js/944.fed2ca5b.chunk.js": "/medicine-delivery-app/static/js/944.fed2ca5b.chunk.js",
     "static/js/535.8f3bbef6.chunk.js": "/medicine-delivery-app/static/js/535.8f3bbef6.chunk.js",
     "static/js/979.d3b42982.chunk.js": "/medicine-delivery-app/static/js/979.d3b42982.chunk.js",
     "static/js/619.1ebe4033.chunk.js": "/medicine-delivery-app/static/js/619.1ebe4033.chunk.js",
     "static/js/568.4a048802.chunk.js": "/medicine-delivery-app/static/js/568.4a048802.chunk.js",
     "static/media/stock-illustration-drugs-and-pills.jpg": "/medicine-delivery-app/static/media/stock-illustration-drugs-and-pills.a082834e21f168e479a7.jpg",
-    "static/media/sprite.svg": "/medicine-delivery-app/static/media/sprite.07ccd7b951a2cf1bc382d44e7957c866.svg",
+    "static/media/sprite.svg": "/medicine-delivery-app/static/media/sprite.9018931cc6bfef169b70bcd19482f4b5.svg",
     "index.html": "/medicine-delivery-app/index.html",
     "main.9150ec6f.css.map": "/medicine-delivery-app/static/css/main.9150ec6f.css.map",
-    "main.30fe22db.js.map": "/medicine-delivery-app/static/js/main.30fe22db.js.map",
-    "517.859e4697.chunk.js.map": "/medicine-delivery-app/static/js/517.859e4697.chunk.js.map",
-    "944.150ff0d4.chunk.js.map": "/medicine-delivery-app/static/js/944.150ff0d4.chunk.js.map",
+    "main.2971b66f.js.map": "/medicine-delivery-app/static/js/main.2971b66f.js.map",
+    "517.f062f165.chunk.js.map": "/medicine-delivery-app/static/js/517.f062f165.chunk.js.map",
+    "944.fed2ca5b.chunk.js.map": "/medicine-delivery-app/static/js/944.fed2ca5b.chunk.js.map",
     "535.8f3bbef6.chunk.js.map": "/medicine-delivery-app/static/js/535.8f3bbef6.chunk.js.map",
     "979.d3b42982.chunk.js.map": "/medicine-delivery-app/static/js/979.d3b42982.chunk.js.map",
     "619.1ebe4033.chunk.js.map": "/medicine-delivery-app/static/js/619.1ebe4033.chunk.js.map",
@@ -22,6 +22,6 @@
   },
   "entrypoints": [
     "static/css/main.9150ec6f.css",
-    "static/js/main.30fe22db.js"
+    "static/js/main.2971b66f.js"
   ]
 }
