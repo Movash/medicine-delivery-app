@@ -62,11 +62,15 @@ const ShoppingCartItem = ({
           <CountNumber>{medicine.count || 1}</CountNumber>
           <ButtonsCont>
             <CounterButton onClick={() => handleAddOne()}>
-              <svg width="16" height="16">
+              <svg width="12" height="12">
                 <use href={`${sprite}#icon-arrow-top`} />
               </svg>
             </CounterButton>
-            <CounterButton onClick={() => handleSubtractOne()}>⬇</CounterButton>
+            <CounterButton onClick={() => handleSubtractOne()}>
+              <svg width="12" height="12">
+                <use href={`${sprite}#icon-arrow-bottom`} />
+              </svg>
+            </CounterButton>
           </ButtonsCont>
         </CountCont>
       </CartTitleCont>
