@@ -1,5 +1,5 @@
-import { FormCont } from './UserForm.styled';
 import sprite from '../../images/sprite.svg';
+import { FormCont, UserFormInput } from './UserForm.styled';
 
 const UserForm = ({ formik }) => {
 
@@ -8,7 +8,7 @@ const UserForm = ({ formik }) => {
       <form id="userForm" onSubmit={formik.handleSubmit}>
         <div className="inputs-cont">
           <div className="input-cont">
-            <input
+            <UserFormInput
               autoComplete="off"
               name="name"
               type="text"
@@ -49,7 +49,7 @@ const UserForm = ({ formik }) => {
               )}
           </div>
           <div className="input-cont">
-            <input
+            <UserFormInput
               autoComplete="off"
               name="email"
               type="email"
@@ -90,7 +90,7 @@ const UserForm = ({ formik }) => {
               )}
           </div>
           <div className="input-cont">
-            <input
+            <UserFormInput
               autoComplete="off"
               name="phone"
               type="tel"
@@ -131,7 +131,7 @@ const UserForm = ({ formik }) => {
               )}
           </div>
           <div className="input-cont">
-            <input
+            <UserFormInput
               autoComplete="off"
               name="address"
               type="text"
