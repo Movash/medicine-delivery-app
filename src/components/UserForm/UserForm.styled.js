@@ -2,22 +2,22 @@ import { styled } from 'styled-components';
 
 export const FormCont = styled('div')(() => {
   return {
-    input: {
-      fontSize: '14px',
-      lineHeight: 1.29,
-      width: '100%',
-      height: '46px',
-      border: '1px solid rgba(239, 237, 232, 0.3)',
-      borderRadius: '12px',
-      backgroundColor: 'var(--second-gray-color)',
-      textIndent: '12px',
-      outline: 'none',
-      paddingTop: '2px',
-      transition: 'border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)',
-      '&:hover, &:focus': {
-        borderColor: 'var(--active-color)',
-      },
-    },
+    // input: {
+    //   fontSize: '14px',
+    //   lineHeight: 1.29,
+    //   width: '100%',
+    //   height: '46px',
+    //   border: '1px solid rgba(239, 237, 232, 0.3)',
+    //   borderRadius: '12px',
+    //   backgroundColor: 'var(--second-gray-color)',
+    //   textIndent: '12px',
+    //   outline: 'none',
+    //   paddingTop: '2px',
+    //   transition: 'border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)',
+    //   '&:hover, &:focus': {
+    //     borderColor: 'var(--active-color)',
+    //   },
+    // },
     '.inputs-cont': {
       display: 'flex',
       flexDirection: 'column',
@@ -52,3 +52,21 @@ export const FormCont = styled('div')(() => {
     },
   };
 });
+
+export const UserFormInput = styled.input`
+  font-size: 14px;
+  line-height: 1.29;
+  width: 100%;
+  height: 46px;
+  border: 1px solid rgba(239, 237, 232, 0.3);
+  border-radius: 12px;
+  background-color: var(--second-gray-color);
+  text-indent: 12px;
+  outline: none;
+  padding-top: 2px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    border-color: var(--active-color);
+  }
+`;
