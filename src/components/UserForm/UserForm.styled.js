@@ -18,13 +18,13 @@ export const FormCont = styled('div')(() => {
     //     borderColor: 'var(--active-color)',
     //   },
     // },
-    '.inputs-cont': {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      gap: '30px',
-      width: '100%',
-    },
+    // '.inputs-cont': {
+    //   display: 'flex',
+    //   flexDirection: 'column',
+    //   alignItems: 'center',
+    //   gap: '30px',
+    //   width: '100%',
+    // },
     '.input-cont': {
       width: '50%',
     },
@@ -69,4 +69,12 @@ export const UserFormInput = styled.input`
   &:focus {
     border-color: var(--active-color);
   }
+`;
+
+export const InputsCont = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
 `;
