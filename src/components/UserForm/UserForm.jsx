@@ -1,12 +1,12 @@
 import sprite from '../../images/sprite.svg';
-import { FormCont, UserFormInput } from './UserForm.styled';
+import { FormCont, InputsCont, UserFormInput } from './UserForm.styled';
 
 const UserForm = ({ formik }) => {
 
   return (
     <FormCont>
       <form id="userForm" onSubmit={formik.handleSubmit}>
-        <div className="inputs-cont">
+        <InputsCont>
           <div className="input-cont">
             <UserFormInput
               autoComplete="off"
@@ -171,7 +171,7 @@ const UserForm = ({ formik }) => {
                 </div>
               )}
           </div>
-        </div>
+        </InputsCont>
       </form>
     </FormCont>
   );
