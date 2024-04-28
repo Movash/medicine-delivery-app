@@ -78,3 +78,7 @@ export const InputsCont = styled.div`
   gap: 30px;
   width: 100%;
 `;
+
+export const InputCont = styled.div`
+  width: 50%;
+`;
