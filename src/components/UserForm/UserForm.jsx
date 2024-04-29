@@ -1,5 +1,5 @@
 import sprite from '../../images/sprite.svg';
-import { FormCont, InputsCont, UserFormInput } from './UserForm.styled';
+import { FormCont, InputCont, InputsCont, UserFormInput } from './UserForm.styled';
 
 const UserForm = ({ formik }) => {
 
@@ -7,7 +7,7 @@ const UserForm = ({ formik }) => {
     <FormCont>
       <form id="userForm" onSubmit={formik.handleSubmit}>
         <InputsCont>
-          <div className="input-cont">
+          <InputCont>
             <UserFormInput
               autoComplete="off"
               name="name"
@@ -47,8 +47,8 @@ const UserForm = ({ formik }) => {
                   <p className="notify-descr error">{formik.errors.name}</p>
                 </div>
               )}
-          </div>
-          <div className="input-cont">
+          </InputCont>
+          <InputCont>
             <UserFormInput
               autoComplete="off"
               name="email"
@@ -88,8 +88,8 @@ const UserForm = ({ formik }) => {
                   <p className="notify-descr error">{formik.errors.email}</p>
                 </div>
               )}
-          </div>
-          <div className="input-cont">
+          </InputCont>
+          <InputCont>
             <UserFormInput
               autoComplete="off"
               name="phone"
@@ -129,8 +129,8 @@ const UserForm = ({ formik }) => {
                   <p className="notify-descr error">{formik.errors.phone}</p>
                 </div>
               )}
-          </div>
-          <div className="input-cont">
+          </InputCont>
+          <InputCont>
             <UserFormInput
               autoComplete="off"
               name="address"
@@ -170,7 +170,7 @@ const UserForm = ({ formik }) => {
                   <p className="notify-descr error">{formik.errors.address}</p>
                 </div>
               )}
-          </div>
+          </InputCont>
         </InputsCont>
       </form>
     </FormCont>
