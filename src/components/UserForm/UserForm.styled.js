@@ -25,9 +25,9 @@ export const FormCont = styled('div')(() => {
     //   gap: '30px',
     //   width: '100%',
     // },
-    '.input-cont': {
-      width: '50%',
-    },
+    // '.input-cont': {
+    //   width: '50%',
+    // },
     '.input-error': {
       borderColor: 'var(--error-color)',
     },
@@ -81,4 +81,11 @@ export const InputsCont = styled.div`
 
 export const InputCont = styled.div`
   width: 50%;
+`;
+
+export const NotifyCont = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
 `;
