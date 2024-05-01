@@ -1,5 +1,5 @@
 import sprite from '../../images/sprite.svg';
-import { FormCont, InputCont, InputsCont, UserFormInput } from './UserForm.styled';
+import { FormCont, InputCont, InputsCont, NotifyCont, UserFormInput } from './UserForm.styled';
 
 const UserForm = ({ formik }) => {
 
@@ -30,22 +30,22 @@ const UserForm = ({ formik }) => {
             {!formik.errors.name &&
               formik.touched.name &&
               formik.values.name.length > 0 && (
-                <div className="notify-cont">
+                <NotifyCont>
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <use href={`${sprite}#icon-checkbox-circle-fill`} />
                   </svg>
                   <p className="notify-descr success">Success name</p>
-                </div>
+                </NotifyCont>
               )}
             {formik.errors.name &&
               formik.touched.name &&
               formik.values.name.length > 0 && (
-                <div className="notify-cont">
+                <NotifyCont>
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <use href={`${sprite}#icon-red`} />
                   </svg>
                   <p className="notify-descr error">{formik.errors.name}</p>
-                </div>
+                </NotifyCont>
               )}
           </InputCont>
           <InputCont>
@@ -71,22 +71,22 @@ const UserForm = ({ formik }) => {
             {!formik.errors.email &&
               formik.touched.email &&
               formik.values.email.length > 0 && (
-                <div className="notify-cont">
+                <NotifyCont>
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <use href={`${sprite}#icon-checkbox-circle-fill`} />
                   </svg>
                   <p className="notify-descr success">Success email</p>
-                </div>
+                </NotifyCont>
               )}
             {formik.errors.email &&
               formik.touched.email &&
               formik.values.email.length > 0 && (
-                <div className="notify-cont">
+                <NotifyCont>
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <use href={`${sprite}#icon-red`} />
                   </svg>
                   <p className="notify-descr error">{formik.errors.email}</p>
-                </div>
+                </NotifyCont>
               )}
           </InputCont>
           <InputCont>
@@ -112,22 +112,22 @@ const UserForm = ({ formik }) => {
             {!formik.errors.phone &&
               formik.touched.phone &&
               formik.values.phone.length > 0 && (
-                <div className="notify-cont">
+                <NotifyCont>
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <use href={`${sprite}#icon-checkbox-circle-fill`} />
                   </svg>
                   <p className="notify-descr success">Success phone</p>
-                </div>
+                </NotifyCont>
               )}
             {formik.errors.phone &&
               formik.touched.phone &&
               formik.values.phone.length > 0 && (
-                <div className="notify-cont">
+                <NotifyCont>
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <use href={`${sprite}#icon-red`} />
                   </svg>
                   <p className="notify-descr error">{formik.errors.phone}</p>
-                </div>
+                </NotifyCont>
               )}
           </InputCont>
           <InputCont>
@@ -153,22 +153,22 @@ const UserForm = ({ formik }) => {
             {!formik.errors.address &&
               formik.touched.address &&
               formik.values.address.length > 0 && (
-                <div className="notify-cont">
+                <NotifyCont>
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <use href={`${sprite}#icon-checkbox-circle-fill`} />
                   </svg>
                   <p className="notify-descr success">Success address</p>
-                </div>
+                </NotifyCont>
               )}
             {formik.errors.address &&
               formik.touched.address &&
               formik.values.address.length > 0 && (
-                <div className="notify-cont">
+                <NotifyCont>
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <use href={`${sprite}#icon-red`} />
                   </svg>
                   <p className="notify-descr error">{formik.errors.address}</p>
-                </div>
+                </NotifyCont>
               )}
           </InputCont>
         </InputsCont>
