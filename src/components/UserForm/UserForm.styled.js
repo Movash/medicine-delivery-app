@@ -34,12 +34,12 @@ export const FormCont = styled('div')(() => {
     '.input-success': {
       borderColor: 'var(--success-color)',
     },
-    '.notify-cont': {
-      display: 'flex',
-      alignItems: 'center',
-      gap: '4px',
-      marginTop: '4px',
-    },
+    // '.notify-cont': {
+    //   display: 'flex',
+    //   alignItems: 'center',
+    //   gap: '4px',
+    //   marginTop: '4px',
+    // },
     '.notify-descr': {
       fontSize: '12px',
       letterSpacing: '0.01em',
@@ -88,4 +88,9 @@ export const NotifyCont = styled.div`
   align-items: center;
   gap: 4px;
   margin-top: 4px;
+`;
+
+export const NotifyDescr = styled.p`
+  font-size: 12px;
+  letter-spacing: 0.01em;
 `;
