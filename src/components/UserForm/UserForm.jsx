@@ -1,5 +1,5 @@
 import sprite from '../../images/sprite.svg';
-import { FormCont, InputCont, InputsCont, NotifyCont, UserFormInput } from './UserForm.styled';
+import { FormCont, InputCont, InputsCont, NotifyCont, NotifyDescr, UserFormInput } from './UserForm.styled';
 
 const UserForm = ({ formik }) => {
 
@@ -34,7 +34,9 @@ const UserForm = ({ formik }) => {
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <use href={`${sprite}#icon-checkbox-circle-fill`} />
                   </svg>
-                  <p className="notify-descr success">Success name</p>
+                  <NotifyDescr className="success">
+                    Success name
+                  </NotifyDescr>
                 </NotifyCont>
               )}
             {formik.errors.name &&
@@ -44,7 +46,9 @@ const UserForm = ({ formik }) => {
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <use href={`${sprite}#icon-red`} />
                   </svg>
-                  <p className="notify-descr error">{formik.errors.name}</p>
+                  <NotifyDescr className="error">
+                    {formik.errors.name}
+                  </NotifyDescr>
                 </NotifyCont>
               )}
           </InputCont>
@@ -75,7 +79,9 @@ const UserForm = ({ formik }) => {
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <use href={`${sprite}#icon-checkbox-circle-fill`} />
                   </svg>
-                  <p className="notify-descr success">Success email</p>
+                  <NotifyDescr className="success">
+                    Success email
+                  </NotifyDescr>
                 </NotifyCont>
               )}
             {formik.errors.email &&
@@ -85,7 +91,9 @@ const UserForm = ({ formik }) => {
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <use href={`${sprite}#icon-red`} />
                   </svg>
-                  <p className="notify-descr error">{formik.errors.email}</p>
+                  <NotifyDescr className="error">
+                    {formik.errors.email}
+                  </NotifyDescr>
                 </NotifyCont>
               )}
           </InputCont>
@@ -116,7 +124,9 @@ const UserForm = ({ formik }) => {
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <use href={`${sprite}#icon-checkbox-circle-fill`} />
                   </svg>
-                  <p className="notify-descr success">Success phone</p>
+                  <NotifyDescr className="success">
+                    Success phone
+                  </NotifyDescr>
                 </NotifyCont>
               )}
             {formik.errors.phone &&
@@ -126,7 +136,9 @@ const UserForm = ({ formik }) => {
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <use href={`${sprite}#icon-red`} />
                   </svg>
-                  <p className="notify-descr error">{formik.errors.phone}</p>
+                  <NotifyDescr className="error">
+                    {formik.errors.phone}
+                  </NotifyDescr>
                 </NotifyCont>
               )}
           </InputCont>
@@ -157,7 +169,7 @@ const UserForm = ({ formik }) => {
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <use href={`${sprite}#icon-checkbox-circle-fill`} />
                   </svg>
-                  <p className="notify-descr success">Success address</p>
+                  <NotifyDescr className="success">Success address</NotifyDescr>
                 </NotifyCont>
               )}
             {formik.errors.address &&
@@ -167,7 +179,7 @@ const UserForm = ({ formik }) => {
                   <svg width="16" height="16" viewBox="0 0 16 16">
                     <use href={`${sprite}#icon-red`} />
                   </svg>
-                  <p className="notify-descr error">{formik.errors.address}</p>
+                  <NotifyDescr className="error">{formik.errors.address}</NotifyDescr>
                 </NotifyCont>
               )}
           </InputCont>
