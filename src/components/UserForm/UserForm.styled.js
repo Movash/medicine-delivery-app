@@ -28,9 +28,9 @@ export const FormCont = styled('div')(() => {
     // '.input-cont': {
     //   width: '50%',
     // },
-    '.input-error': {
-      borderColor: 'var(--error-color)',
-    },
+    // '.input-error': {
+    //   borderColor: 'var(--error-color)',
+    // },
     '.input-success': {
       borderColor: 'var(--success-color)',
     },
@@ -40,10 +40,10 @@ export const FormCont = styled('div')(() => {
     //   gap: '4px',
     //   marginTop: '4px',
     // },
-    '.notify-descr': {
-      fontSize: '12px',
-      letterSpacing: '0.01em',
-    },
+    // '.notify-descr': {
+    //   fontSize: '12px',
+    //   letterSpacing: '0.01em',
+    // },
     '.error': {
       color: 'var(--error-color)',
     },
@@ -68,6 +68,10 @@ export const UserFormInput = styled.input`
   &:hover,
   &:focus {
     border-color: var(--active-color);
+  }
+
+  &.input-error {
+    border-color: var(--error-color);
   }
 `;
 
