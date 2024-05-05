@@ -31,9 +31,9 @@ export const FormCont = styled('div')(() => {
     // '.input-error': {
     //   borderColor: 'var(--error-color)',
     // },
-    '.input-success': {
-      borderColor: 'var(--success-color)',
-    },
+    // '.input-success': {
+    //   borderColor: 'var(--success-color)',
+    // },
     // '.notify-cont': {
     //   display: 'flex',
     //   alignItems: 'center',
@@ -72,6 +72,10 @@ export const UserFormInput = styled.input`
 
   &.input-error {
     border-color: var(--error-color);
+  }
+
+  &.input-success {
+    border-color: var(--success-color);
   }
 `;
 
