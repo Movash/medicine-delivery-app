@@ -44,9 +44,9 @@ export const FormCont = styled('div')(() => {
     //   fontSize: '12px',
     //   letterSpacing: '0.01em',
     // },
-    '.error': {
-      color: 'var(--error-color)',
-    },
+    // '.error': {
+    //   color: 'var(--error-color)',
+    // },
     '.success': {
       color: 'var(--success-color)',
     },
@@ -101,4 +101,8 @@ export const NotifyCont = styled.div`
 export const NotifyDescr = styled.p`
   font-size: 12px;
   letter-spacing: 0.01em;
+
+  &.error {
+    color: var(--error-color);
+  }
 `;
