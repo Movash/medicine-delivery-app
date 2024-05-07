@@ -47,9 +47,9 @@ export const FormCont = styled('div')(() => {
     // '.error': {
     //   color: 'var(--error-color)',
     // },
-    '.success': {
-      color: 'var(--success-color)',
-    },
+    // '.success': {
+    //   color: 'var(--success-color)',
+    // },
   };
 });
 
@@ -104,5 +104,9 @@ export const NotifyDescr = styled.p`
 
   &.error {
     color: var(--error-color);
+  }
+
+  &.success {
+    color: var(--success-color);
   }
 `;
