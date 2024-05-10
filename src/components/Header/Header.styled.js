@@ -29,3 +29,14 @@ export const Nav = styled('nav')(() => {
     },
   };
 });
+
+export const HeaderNav = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 15;
+  padding-bottom: 15;
+  background-color: var(--sky-blue-color);
+  z-index: 2;
+`;
